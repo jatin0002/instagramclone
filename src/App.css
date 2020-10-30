@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.app {
+  background-color: #fafafa;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app__body {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 65%;
+}
+.app__body > main {
+  width: 100%;
+}
+.app__stories {
+  width: 92%;
+  margin-top: 28px;
+  padding: 15px 10px;
+  background-color: #fff;
+}
+.app__body > main {
+  height: 93vh;
+}
+.app__body > main {
+  overflow: scroll;
+}
+.app__body > main::-webkit-scrollbar {
+  display: none;
+}
+.app__body > main {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.App-link {
-  color: #61dafb;
+.rightSide {
+  width: 35%;
+  height: 93vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .app__body {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app__body > main > .app__stories {
+    margin: 28px auto 0;
+  }
+  .rightSide {
+    display: none;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .app__body {
+    width: 100%;
+  }
+  .app__body > main > .app__stories {
+    margin: 28px auto 0;
+  }
+  .rightSide {
+    display: none;
   }
 }
