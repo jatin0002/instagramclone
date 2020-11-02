@@ -15,10 +15,9 @@
   padding: 15px 10px;
   background-color: #fff;
 }
+
 .app__body > main {
   height: 93vh;
-}
-.app__body > main {
   overflow: scroll;
 }
 .app__body > main::-webkit-scrollbar {
@@ -27,6 +26,10 @@
 .app__body > main {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.addpost {
+  width: 98%;
+  margin: 0 auto;
 }
 
 .rightSide {

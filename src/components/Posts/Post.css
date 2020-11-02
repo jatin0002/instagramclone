@@ -9,6 +9,13 @@
   align-items: center;
   padding: 5px;
 }
+.post__header,
+.post__img {
+  border-bottom: 1px solid lightgray;
+}
+.post__img {
+  margin-bottom: 8px;
+}
 .header__userInfo > h5 {
   margin-left: 10px;
 }
@@ -26,6 +33,9 @@
 }
 .post__leftOptions > .MuiSvgIcon-root {
   padding: 0 5px;
+}
+.post__likeOption {
+  color: red;
 }
 .post__caption {
   display: flex;

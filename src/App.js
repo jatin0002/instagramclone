@@ -1,26 +1,33 @@
+import React, { useEffect } from 'react'
 import './App.css'
+
 import Header from './components/Header/Header'
-import Stories from './components/Stories/Stories'
-import Card from '@material-ui/core/Card'
+
 import Posts from './components/Posts/Posts'
 import SideBar from './components/SideBar/SideBar'
+import AddPost from './components/AddPost/AddPost'
+import Login from './components/Login/Login'
+import { useStateValue } from './StateProvider'
 
 function App() {
+  const [{ user }, dispatch] = useStateValue()
   return (
-    <div className="app">
-      <Header />
-      <div className="app__body">
-        <main>
-          <Card className="app__stories">
-            <Stories />
-          </Card>
-          <Posts />
-        </main>
-        <div className="rightSide">
-          <SideBar />
+    <>
+      {!user ? (
+        <Login />
+      ) : (
+        <div className="app">
+          <Header />
+          <div className="app__body">
+            <main>
+              <AddPost />
+
+              <Posts />
+            </main>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   )
 }
 
